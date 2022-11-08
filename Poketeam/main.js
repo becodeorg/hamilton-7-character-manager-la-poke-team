@@ -44,7 +44,7 @@ axios.get('https://character-database.becode.xyz/characters/')
     // console.log(json.data[1].name);
 
     for(let i=0;i<json.data.length;i++){
-
+        const lien = document.createElement("a");
         const newdiv = document.createElement("div");
         const divtitle = document.createElement("div");
         const divlittledesc = document.createElement("div");
@@ -53,10 +53,13 @@ axios.get('https://character-database.becode.xyz/characters/')
         
         divtitle.setAttribute("class","titre_name");
         divlittledesc.setAttribute("class","littledesc");
+        lien.setAttribute("href","singleCharacter.html?" + json.data[i].id);
         // divdesc.setAttribute("class","bigdesc");
         image.setAttribute("src","data:image/jpeg;base64," + json.data[i].image);
-    
-        document.body.append(newdiv);
+
+
+        document.body.append(lien);
+        lien.append(newdiv);
     
         newdiv.append(divtitle);
         newdiv.append(divlittledesc);
@@ -66,6 +69,8 @@ axios.get('https://character-database.becode.xyz/characters/')
         divtitle.append(json.data[i].name);
         divlittledesc.append(json.data[i].shortDescription);
         // divdesc.append(json.data[i].description);
+
+        // console.log(json.data[i].id);
 }
 
   })
