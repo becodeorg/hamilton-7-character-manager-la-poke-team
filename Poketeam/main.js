@@ -57,8 +57,9 @@ axios.get('https://character-database.becode.xyz/characters/')
         // divdesc.setAttribute("class","bigdesc");
         image.setAttribute("src","data:image/jpeg;base64," + json.data[i].image);
 
-
-        document.body.append(lien);
+        const container = document.querySelector(".container");
+       
+        container.append(lien);
         lien.append(newdiv);
     
         newdiv.append(divtitle);
@@ -71,6 +72,13 @@ axios.get('https://character-database.becode.xyz/characters/')
         // divdesc.append(json.data[i].description);
 
         // console.log(json.data[i].id);
+
+        if(json.data[i].shortDescription === "Eau"){
+          newdiv.style.backgroundColor ="blue";
+      }
+      else{
+        newdiv.style.backgroundColor = "lightgrey";
+      }
 }
 
   })

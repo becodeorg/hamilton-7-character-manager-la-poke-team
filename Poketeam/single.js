@@ -72,6 +72,10 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     divlittledesc.append(single.data.shortDescription);
     divdesc.append(single.data.description);
 
+
+    // console.log(single.data.shortDescription);
+    
+
   })
   .catch(function (error) {
     // handle error
