@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Poke Manager</title>
 </head>
-<body>
-    <h1>poké</h1>
-    <main>
+<body class="font-sans">
+    <h1 class="text-5xl font-bold text-center mt-10 mb-10">Poke Manager</h1>
+    <img src="./ressources/images/CD57DD73.png" class="logo text-center">
 
+    <main>
+        
+        <!-- Card template -->
+        <div class="card__single rounded-2xl bg-green-500 h-96" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-reverse="true" data-tilt-scale="1.1">
+            <div class="card__single__top">
+                <img src="./ressources/images/bulbizarre.png" class="single__pokemon-img h-96">
+            </div>
+            <div class="card__single__description rounded-2xl text-black bg-white text-center relative">
+                <h2 class="card__single__title text-3xl font-bold text-black text-center text-green-500">Pokename</h2>
+                <span class="font-bold">
+                    Il y a une graine sur son dos depuis sa naissance. Elle grossit un peu chaque jour.
+                </span>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias quis, dolorum voluptate ipsam adipisci enim eaque dignissimos dolor sequi tempore debitis quam repudiandae praesentium magnam officia recusandae ut eligendi.
+                </span>
+                <div class="card__single__button relative bottom-0">
+                    <button class="card__button__edit">Edit character</button>
+                    <button class="card__button__delete">Delete character</button>
+                </div>
+            </div>
+        </div>
+        
     </main>
+
+    <!-- <script src="./ressources/js/tilt-effect.js"></script> -->
 </body>
 </html>
