@@ -63,6 +63,7 @@ body {
 	/* background-image: url(../PokeTeam/ressources/images/pokeball_icon.svg); */
 	background-size: cover;
 	background-position: center;
+	padding-bottom: 100px;
 	/* background-repeat: no-repeat; */
 }
 main {
@@ -70,15 +71,26 @@ main {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-top: 90px;
 	/* height: 100vh; */
+}
+
+nav {
+	z-index: 2;
+	position: fixed;
+	background: black;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 h1 {
 	display: none;
 }
 .logo {
-	margin: 50px 0;
-	width: 400px;
+	margin-top: 8px;
+	width: 300px;
 }
 
 .card {
@@ -137,6 +149,44 @@ h1 {
 	margin: 0 auto;
 	width: 50px;
 	height: 50px;
+}
+
+@media (max-width: 1049px) {
+	.card {
+		padding-bottom: 150px;
+		margin: 15px 15px;
+	}
+	.card:hover {
+		padding-bottom: 150px;
+		margin: 15px 15px;
+	}
+	.card__description {
+		bottom: 0;
+	}
+	.card:hover .card__description {
+		bottom: 0;
+		transition: 0.3s ease-in-out;
+	}
+}
+@media (max-width: 700px) {
+	nav {
+		height: 60px;
+	}
+	.logo {
+		margin-top: 10px;
+		width: 200px;
+	}
+}
+@media (max-width: 345px) {
+	.card {
+		width: 90%;
+	}
+	.card__top {
+		width: 90%;
+	}
+	.card__description{
+		width: 100%;
+	}
 }
 
 /* Character creation */
@@ -208,9 +258,6 @@ h1 {
 }
 
 @media (max-width: 500px) {
-	.logo {
-		width: 250px;
-	}
 	#formcharacter form {
 		width: 100%;
 	}
@@ -222,6 +269,7 @@ h1 {
 /* SINGLE CHARACTER */
 
 .card__single {
+	margin-top: 50px;
 	max-width: 950px;
 	display: flex;
 	flex-direction: row;
@@ -247,6 +295,9 @@ h1 {
 
 .card__single__button {
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 	bottom: 0;
 }
@@ -292,5 +343,14 @@ h1 {
 @media (max-width: 630px) {
 	.card__single {
 		width: 90%;
+	}
+}
+@media (max-width: 435px) {
+	.card__single__button {
+		flex-direction: column;
+	}
+	.card__single__button button {
+		width: 80%;
+		margin: 10px 10px;
 	}
 }
