@@ -79,6 +79,7 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     Ldesc.setAttribute("class","font-bold");
     buttons.setAttribute("class","card__single__button relative bottom-0");
     button1.setAttribute("class","card__button__edit");
+    button1.setAttribute("href","character-editor.html?" + single.data.id);
     button2.setAttribute("class","card__button__delete");
   
 
