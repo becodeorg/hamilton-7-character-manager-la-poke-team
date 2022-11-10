@@ -72,6 +72,7 @@ main {
 	align-items: center;
 	flex-wrap: wrap;
 	margin-top: 90px;
+	margin-bottom: 100px;
 	/* height: 100vh; */
 }
 
@@ -192,6 +193,7 @@ h1 {
 /* Character creation */
 #formcharacter {
 	width: 100%;
+	margin-top: 50px;
 }
 #formcharacter h2 {
 	font-size: 2.5rem;
@@ -223,46 +225,60 @@ h1 {
 #formcharacter form div textarea {
 	background: none;
 	height: 200px;
+	margin-top: 8px;
 	border-bottom: 2px solid #4057A2;
 }
 #formcharacter .form-button {
+	width: 100%;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	position: relative;
+	bottom: 0;
+}
+.input_image {
+	margin-top: 8px;
 }
 .form-button button {
-	border-radius: 50px;
-	padding: 15px 0;
-	width: 150px;
+	width: 40%;
+	border-radius: 15px;
+	padding: 1rem 0;
 	font-weight: bold;
-	margin: 10px;
+	margin: 10px 10px;
+	transition: 0.2s ease-in-out;
+}
+.form-button button:hover {
+	transform: scale(1.1);
+	transition: 0.2s ease-in-out;
 }
 .form-button__add {
-	background-color: #84CC16;
+	background-color: #22C55E	;
 	color: white;
 }
-.form-button__add:hover {
-	box-shadow: 0 0 12px #84CC16;
-	transform: scale(1.1);
-	transition: 0.1s ease-in-out;
-}
 .form-button__delete {
-	color: #E41F25;
 	border: 3px solid #E41F25;
-}
-.form-button__delete:hover {
-	box-shadow: 0 0 12px #E41F25;
-	transform: scale(1.1);
-	transition: 0.1s ease-in-out;
+	color: #E41F25;
 }
 
 @media (max-width: 500px) {
-	#formcharacter form {
+	#formcharacter {
 		width: 100%;
 	}
+	#formcharacter form {
+		width: 300px;
+		padding: 30px;
+	}
 	#formcharacter h2 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
+	}
+	#formcharacter h2 {
+		text-align: center;
+	}
+	main {
+		margin-bottom: 0;
+	}
+	.form-button button  {
+		width: 80%;
 	}
 }
 
@@ -270,6 +286,7 @@ h1 {
 
 .card__single {
 	margin-top: 50px;
+	margin-bottom: 100px;
 	max-width: 950px;
 	display: flex;
 	flex-direction: row;
