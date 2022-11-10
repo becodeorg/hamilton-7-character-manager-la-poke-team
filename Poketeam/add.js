@@ -49,29 +49,37 @@
 // })
 var srcData;
 var newcharacter;
-const file = document.getElementById("myFile");
-file.addEventListener("change", test);
+const file = document.getElementById("form");
+file.addEventListener("submit", encode);
 
-async function test(){
-  const test = await encode();
-  console.log("oui" + test);
-  console.log(newcharacter);
-}
+// async function test(){
+//   const test = await encode();
+//   console.log("oui" + test);
+//   console.log(newcharacter);
+// }
 
 
- function encode() {
+ function encode(e) {
+  e.preventDefault();
     var selectedfile = document.getElementById("myFile").files;
+
     const getBase64StringFromDataURL = (dataURL) =>
-            dataURL.replace('data:', '').replace(/^.+,/, '');
+    dataURL.replace('data:', '').replace(/^.+,/, '');
+
+
     if (selectedfile.length > 0) {   
+
       var imageFile = selectedfile[0];
       var fileReader = new FileReader();
+
       fileReader.onload = function(fileLoadedEvent) {
-         srcData = fileLoadedEvent.target.result;
+
+        srcData = fileLoadedEvent.target.result;
         var newImage = document.createElement('img');
         newImage.src = srcData;
-        document.getElementById("dummy").innerHTML = newImage.outerHTML;
-        document.getElementById("txt").value = document.getElementById("dummy").innerHTML;
+        // document.getElementById("dummy").innerHTML = newImage.outerHTML;
+        // document.getElementById("txt").value = document.getElementById("dummy").innerHTML;
+        
         srcData = getBase64StringFromDataURL(fileReader.result);
         console.log(srcData);
          newcharacter = {
@@ -83,7 +91,16 @@ async function test(){
           image : srcData,
       }
       
-       
+       console.log(newcharacter)
+       fetch("https://character-database.becode.xyz/characters/", {
+        method:"POST",
+        body: JSON.stringify(newcharacter),
+        headers:{
+            "Content-type": "application/json"
+        },
+      });  
+
+      
       
       
       }
@@ -91,13 +108,7 @@ async function test(){
 
       
     }
-    // fetch("https://character-database.becode.xyz/characters/", {
-    //   method:"POST",
-    //   body: JSON.stringify(newcharacter),
-    //   headers:{
-    //       "Content-type": "application/json"
-    //   },
-    // });  
+    
   
 }
 

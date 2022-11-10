@@ -63,7 +63,7 @@ axios.get('https://character-database.becode.xyz/characters/')
         text.setAttribute("class","card__description rounded-2xl text-black bg-white text-center");
         name.setAttribute("class","card__title text-2xl font-bold text-black text-center text-green-500")
 
-        lien.setAttribute("href","singleCharacter.html?" + json.data[i].id);
+        lien.setAttribute("href","single-character.html?" + json.data[i].id);
         image.setAttribute("src","data:image/jpeg;base64," + json.data[i].image);
         image.setAttribute("class","pokemon-img");
 
