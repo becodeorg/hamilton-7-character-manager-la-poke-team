@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@font-face {
+	font-family: "pokefont";
+	src: url(./ressources/font/pokemon-solid.ttf);
+	font-style: light;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,4 +50,307 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* HOME PAGE */
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	/* background: linear-gradient(45deg, #000, #434343); */
+	background-image: url(../PokeTeam/ressources/images/background.svg);
+	/* background-color: #ddd; */
+	/* background-image: url(../PokeTeam/ressources/images/pokeball_icon.svg); */
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 100px;
+	/* background-repeat: no-repeat; */
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 90px;
+	/* height: 100vh; */
+}
+
+nav {
+	z-index: 2;
+	position: fixed;
+	background: black;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	display: none;
+}
+.logo {
+	margin-top: 8px;
+	width: 300px;
+}
+
+.card {
+	width: 320px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 0;
+	margin: 90px 15px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.1s ease-in-out;
+}
+.card:hover {
+	padding-bottom: 150px;
+	margin: 15px 15px;
+}
+.pokemon-img {
+	height: 200px;
+	margin-bottom: 15px;
+}
+.card__description {
+	width: 320px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 15px;
+	line-height: 20px;
+	position: absolute;
+	bottom: -150px;
+	transition: 0.3s ease-in-out;
+}
+.card:hover .card__description {
+	bottom: 0;
+	transition: 0.3s ease-in-out;
+}
+.card__title {
+	margin-bottom: 15px;
+}
+.card__description p {
+	text-align: left;
+}
+.new-character {
+	width: 70px;
+	height: 70px;
+	background-color: #E41F25;
+	border-radius: 50px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.new-character img {
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+}
+
+@media (max-width: 1049px) {
+	.card {
+		padding-bottom: 150px;
+		margin: 15px 15px;
+	}
+	.card:hover {
+		padding-bottom: 150px;
+		margin: 15px 15px;
+	}
+	.card__description {
+		bottom: 0;
+	}
+	.card:hover .card__description {
+		bottom: 0;
+		transition: 0.3s ease-in-out;
+	}
+}
+@media (max-width: 700px) {
+	nav {
+		height: 60px;
+	}
+	.logo {
+		margin-top: 10px;
+		width: 200px;
+	}
+}
+@media (max-width: 345px) {
+	.card {
+		width: 90%;
+	}
+	.card__top {
+		width: 90%;
+	}
+	.card__description{
+		width: 100%;
+	}
+}
+
+/* Character creation */
+#formcharacter {
+	width: 100%;
+}
+#formcharacter h2 {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+	color: aliceblue;
+	font-weight: bold;
+}
+#formcharacter form {
+	background-color: aliceblue;
+	border-radius: 24px;
+	padding: 50px;
+}
+#formcharacter form div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+} 
+#formcharacter form div label {
+	font-weight: 600;
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+	color: #4057A2;
+}
+#formcharacter form div input {
+	background: none;
+	border-bottom: 2px solid #4057A2;
+	height: 45px;
+}
+#formcharacter form div textarea {
+	background: none;
+	height: 200px;
+	border-bottom: 2px solid #4057A2;
+}
+#formcharacter .form-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.form-button button {
+	border-radius: 50px;
+	padding: 15px 0;
+	width: 150px;
+	font-weight: bold;
+	margin: 10px;
+}
+.form-button__add {
+	background-color: #84CC16;
+	color: white;
+}
+.form-button__add:hover {
+	box-shadow: 0 0 12px #84CC16;
+	transform: scale(1.1);
+	transition: 0.1s ease-in-out;
+}
+.form-button__delete {
+	color: #E41F25;
+	border: 3px solid #E41F25;
+}
+.form-button__delete:hover {
+	box-shadow: 0 0 12px #E41F25;
+	transform: scale(1.1);
+	transition: 0.1s ease-in-out;
+}
+
+@media (max-width: 500px) {
+	#formcharacter form {
+		width: 100%;
+	}
+	#formcharacter h2 {
+		font-size: 1.8rem;
+	}
+}
+
+/* SINGLE CHARACTER */
+
+.card__single {
+	margin-top: 50px;
+	max-width: 950px;
+	display: flex;
+	flex-direction: row;
+}
+.card__single__top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+}
+.card__single__description {
+	width: 50%;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+.card__single__description span {
+	text-align: left;
+	line-height: 1.3rem;
+}
+
+.card__single__button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	bottom: 0;
+}
+.card__single__button button {
+	width: 40%;
+	border-radius: 15px;
+	padding: 1rem 0;
+	font-weight: bold;
+	margin: 0 10px;
+	transition: 0.2s ease-in-out;
+}
+.card__single__button button:hover {
+	transform: scale(1.1);
+	transition: 0.2s ease-in-out;
+}
+.card__button__edit {
+	background-color: #22C55E	;
+	color: white;
+}
+.card__button__delete {
+	border: 3px solid #E41F25;
+	color: #E41F25;
+}
+
+@media (max-width: 1000px) {
+	.card__single {
+		flex-direction: column;
+		width: 600px;
+	}
+	.card__single__top {
+		width: 100%;
+	}
+	.card__single__description {
+		width: 100%;
+	}
+	.single__pokemon-img {
+		height: 300px;
+	}
+	.card__single__description *{
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 630px) {
+	.card__single {
+		width: 90%;
+	}
+}
+@media (max-width: 435px) {
+	.card__single__button {
+		flex-direction: column;
+	}
+	.card__single__button button {
+		width: 80%;
+		margin: 10px 10px;
+	}
 }
