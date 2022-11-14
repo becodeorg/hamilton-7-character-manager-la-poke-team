@@ -82,9 +82,21 @@ axios.get('https://character-database.becode.xyz/characters/')
         name.append(json.data[i].name);
         paragraph.append(json.data[i].shortDescription);
 
+           if(json.data[i].shortDescription === "Eau" || json.data[i].shortDescription === "EAU"){
+          newdiv.style.backgroundColor ="rgb(34,211,238,0.8 )";
+      }
+      else if(json.data[i].shortDescription === "plante" || json.data[i].shortDescription === "PLANTE"){
+        newdiv.style.backgroundColor ="rgb(132,204,22,0.8 )";
+    }
+    else if(json.data[i].shortDescription === "feu" || json.data[i].shortDescription === "FEU"){
+      newdiv.style.backgroundColor = "rgb(249,115,22,0.8 )";
+  }
+      else{
+        newdiv.style.backgroundColor = "rgb(148,163,184,0.7 )";
+        
+      }
+
      
-
-
 
         // const lien = document.createElement("a");
         // const newdiv = document.querySelector("newdiv");
@@ -117,12 +129,7 @@ axios.get('https://character-database.becode.xyz/characters/')
         // paragraph.append(json.data[i].shortDescription);
  
 
-      //   if(json.data[i].shortDescription === "Eau"){
-      //     newdiv.style.backgroundColor ="blue";
-      // }
-      // else{
-      //   newdiv.style.backgroundColor = "lightgrey";
-      // }
+     
 }
 
   })

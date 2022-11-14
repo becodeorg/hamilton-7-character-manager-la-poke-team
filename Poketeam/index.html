@@ -34,11 +34,36 @@
 
     
     </main>
-
-    <button class="new-character"><a href="./character-creation.html"><img src="./ressources/images/pokeball_icon.svg"></a></button>
+    
+    
+    <button class="new-character">
+      <a href="./character-creation.html">
+        <div class="center-on-page">
+          <div class="pokeball">
+            <img src="./ressources/images/pokeball_icon.svg">
+          </div>
+        </div>
+      </a>
+    </button>
 
     <!-- <a href="add.html">Ajouter un Pokemon</a> -->
+    <div class="loader">
+      <div class="lds-ring">
+        <div>
 
+        </div>
+        <div>
+
+        </div>
+        <img src="./ressources/images/pokeball_icon.svg"> 
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      $(window).load(function() {
+      $(".loader").fadeOut("1000"); })
+    </script>
     <script type="module" src="/main.js"></script>
     <script src="./ressources/js/tilt-effect.js"></script>
     <script src="./ressources/js/search.js"></script>

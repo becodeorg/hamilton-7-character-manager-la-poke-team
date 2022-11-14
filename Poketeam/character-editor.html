@@ -52,6 +52,23 @@
             </form>
         </div>
     </main>
+    <div class="loader">
+        <div class="lds-ring">
+          <div>
+  
+          </div>
+          <div>
+  
+          </div>
+          <img src="./ressources/images/pokeball_icon.svg"> 
+        </div>
+      </div>
+      
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+      <script type="text/javascript">
+        $(window).load(function() {
+        $(".loader").fadeOut("1000"); })
+      </script>
     <script type="module" src="./edit.js"></script>
 
 </body>
