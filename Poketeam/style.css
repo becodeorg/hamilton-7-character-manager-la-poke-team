@@ -10,6 +10,10 @@
 	src: url(./ressources/font/pokemon-solid.ttf);
 	font-style: light;
 }
+@font-face {
+	font-family: 'retroG';
+	src: url(./ressources/font/Retro\ Gaming.ttf );
+ }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -159,9 +163,11 @@ h1 {
 }
 .card__title {
 	margin-bottom: 15px;
+	
 }
 .card__description p {
 	text-align: left;
+	
 }
 .new-character {
 	width: 70px;
