@@ -420,9 +420,20 @@ h1 {
 	100% { top: 0 }
   }
 
-
 /* Loader */
-
+.loader {
+	position : fixed;
+	z-index: 3;
+	top : 0;
+	left : 0;
+	height : 100%;
+	width : 100%;
+	cursor : wait;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+}
 .lds-ring {
 	display: inline-block;
 	position: relative;

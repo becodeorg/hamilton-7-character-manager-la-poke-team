@@ -33,28 +33,28 @@ document.addEventListener("click", (e) => {
     }
 }, false);
 
-// deleteBtn.addEventListener('click', () => {
-//     console.log('Click on delete');
-//     body.insertAdjacentHTML('afterbegin', html);
+deleteBtn.addEventListener('click', () => {
+    console.log('Click on delete');
+    body.insertAdjacentHTML('afterbegin', html);
 
-//     const confirmDiv = document.querySelector('.confirm');
-//     const okBtn = document.querySelector('.confirm__button--ok');
-//     okBtn.addEventListener('click', () => {
-//         console.log('Click on OK');
-//     });
+    const confirmDiv = document.querySelector('.confirm');
+    const okBtn = document.querySelector('.confirm__button--ok');
+    okBtn.addEventListener('click', () => {
+        console.log('Click on OK');
+    });
     
-//     const closeBtn = document.querySelector('.confirm__close');
-//     closeBtn.addEventListener('click', () => {
-//         console.log('Click on close');
-//         confirmDiv.remove();
-//     });
+    const closeBtn = document.querySelector('.confirm__close');
+    closeBtn.addEventListener('click', () => {
+        console.log('Click on close');
+        confirmDiv.remove();
+    });
 
-//     const cancelBtn = document.querySelector('.confirm__button--cancel');
-//     cancelBtn.addEventListener('click', () => {
-//         console.log('Click on Cancel');
-//         confirmDiv.remove();
-//     });
-// });
+    const cancelBtn = document.querySelector('.confirm__button--cancel');
+    cancelBtn.addEventListener('click', () => {
+        console.log('Click on Cancel');
+        confirmDiv.remove();
+    });
+});
 
 
 
