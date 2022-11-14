@@ -116,6 +116,9 @@ input#search:focus{
 	background:white;
 	padding-left: 25px;
 }
+input#search::placeholder{
+	font-family: retroG;
+}
 h1 {
 	display: none;
 }
