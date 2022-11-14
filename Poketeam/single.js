@@ -33,6 +33,7 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     newdiv.setAttribute("data-tilt-scale","1.1");
     card.setAttribute("class","card__single__top");
     image.setAttribute("src","data:image/jpeg;base64," + single.data.image);
+    image.setAttribute("class","singleimg");
     text.setAttribute("class","card__single__description rounded-2xl text-black bg-white text-center relative");
     name.setAttribute("class","card__single__title text-3xl font-bold text-black text-center text-green-500");
     Ldesc.setAttribute("class","font-bold");
@@ -64,7 +65,18 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     desc.append(single.data.description);
 
 
-    
+      if(single.data.shortDescription === "Eau" || single.data.shortDescription === "EAU"){
+      newdiv.style.backgroundColor ="rgb(34,211,238,0.8 )";
+        }
+      else if(single.data.shortDescription === "plante" || single.data.shortDescription === "PLANTE"){
+        newdiv.style.backgroundColor ="rgb(132,204,22,0.8 )";
+        }
+      else if(single.data.shortDescription === "feu" || single.data.shortDescription === "FEU"){
+      newdiv.style.backgroundColor = "rgb(249,115,22,0.8 )";
+        }
+      else{
+        newdiv.style.backgroundColor = "rgb(148,163,184,0.7 )";         
+        }
     
 
   })

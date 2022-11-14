@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 @font-face {
 	font-family: "pokefont";
@@ -83,8 +86,32 @@ nav {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	
 }
+input#search{
+	position: absolute;
+    right: 80px;
+    top: 20px;
+	height: 50%;
+	border-radius: 10px;
+	border: 1px solid rgb(148,163,184);
+	background:none;
+	padding-left: 25px;
+}
+input#search:hover{
 
+	border-radius: 10px;
+	border: none;
+	background:white;
+	padding-left: 25px;
+}
+input#search:focus{
+
+	border-radius: 10px;
+	border: none;
+	background:white;
+	padding-left: 25px;
+}
 h1 {
 	display: none;
 }
@@ -150,6 +177,10 @@ h1 {
 	height: 50px;
 }
 
+.leftarrow{
+	transform: rotate(270deg);
+	height: 70%;
+}
 @media (max-width: 1049px) {
 	.card {
 		padding-bottom: 150px;
@@ -278,6 +309,11 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	width: 50%;
+	min-width: 200px;
+}
+.singleimg{
+	min-width: 60%;
+	max-width: 150%;
 }
 .card__single__description {
 	width: 50%;
@@ -286,10 +322,15 @@ h1 {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
+	min-width: 200px;
 }
 .card__single__description span {
 	text-align: left;
 	line-height: 1.3rem;
+	margin-bottom: 15px;
+}
+.card__single__description h2 {
+	margin-bottom: 15px;
 }
 
 .card__single__button {
@@ -299,6 +340,7 @@ h1 {
 	align-items: center;
 	position: relative;
 	bottom: 0;
+	margin-top:15px ;
 }
 .card__single__button button {
 	width: 40%;
@@ -315,10 +357,26 @@ h1 {
 .card__button__edit {
 	background-color: #22C55E	;
 	color: white;
+	border: 3px solid #22C55E;
+	margin-right: 20px;
+	padding: 8px;
+	border-radius: 10px;
+}
+.card__button__edit:hover {
+	background-color: white;
+	color: #22C55E;
 }
 .card__button__delete {
 	border: 3px solid #E41F25;
 	color: #E41F25;
+	margin-right: 20px;
+	padding: 8px;
+	border-radius: 10px;
+}
+.card__button__delete:hover {
+	border: 3px solid transparent;
+	color: white;
+	background-color: #E41F25;
 }
 
 @media (max-width: 1000px) {
@@ -455,3 +513,12 @@ h1 {
 	80% { top: -20px }
 	100% { top: 0 }
   }
+
+  @media (max-width: 1050px) {
+	nav{
+		justify-content: flex-start;
+	}
+	.logo{
+		margin-left: 50px;
+	}
+}
