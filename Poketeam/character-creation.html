@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/pokeball.png" />
     <link rel="stylesheet" href="./style.css">
     <title>Ajouter</title>
 </head>
@@ -60,22 +61,22 @@
           <form action="index.html" id="form" method="post">
               <div class="form-example">
                   <label for="name">Name of the Pokemon</label>
-                  <input type="text" name="name" id="name" placeholder="Enter the pokéname">
+                  <input type="text" name="name" id="name" placeholder="Enter the pokéname" required>
               </div>
   
               <div class="form-example">
                   <label for="littledesc">Type of the Pokemon</label>
-                  <input type="textarea" name="littledesc" id="littledesc" placeholder="Enter the short pokédescription">
+                  <input type="textarea" name="littledesc" id="littledesc" placeholder="Enter the short pokédescription" required>
               </div>
   
               <div class="form-example">
                   <label for="description">Description</label>
-                  <textarea id="description" name="description" placeholder="Enter a pokédescription"></textarea>
+                  <textarea id="description" name="description" placeholder="Enter a pokédescription" required></textarea>
               </div>
       
               <div class="form-example">
                   <label for="file">Enter an Image</label>
-                  <input type="file" id="myFile" name="filename" class="input_image">
+                  <input type="file" id="myFile" name="filename" class="input_image" required>
               </div>
       
               <div class="form-button">

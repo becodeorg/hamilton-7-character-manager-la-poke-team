@@ -91,6 +91,9 @@ axios.get('https://character-database.becode.xyz/characters/')
           else if(json.data[i].shortDescription === "feu" || json.data[i].shortDescription === "FEU"){
           newdiv.style.backgroundColor = "rgb(249,115,22,0.8 )";
             }
+            else if(json.data[i].shortDescription === "electrique" || json.data[i].shortDescription === "ELECTRIQUE" || json.data[i].shortDescription === "éléctrik"){
+              newdiv.style.backgroundColor = "rgb(253,230,138,0.8 )";
+                }
           else{
             newdiv.style.backgroundColor = "rgb(148,163,184,0.7 )";         
             }
