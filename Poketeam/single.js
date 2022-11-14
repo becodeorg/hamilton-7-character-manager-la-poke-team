@@ -60,8 +60,8 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     const Ldesc = document.createElement("span");
     const desc = document.createElement("span");
     const buttons = document.createElement("div");
-    const button1 = document.createElement("button");
-    const button2 = document.createElement("button");
+    const button1 = document.createElement("a");
+    const button2 = document.createElement("a");
 
     const modifier = document.createTextNode("Modifier");
     const supprimer = document.createTextNode("Delete");
@@ -79,7 +79,7 @@ await axios.get('https://character-database.becode.xyz/characters/' +leId)
     Ldesc.setAttribute("class","font-bold");
     buttons.setAttribute("class","card__single__button relative bottom-0");
     button1.setAttribute("class","card__button__edit");
-    button1.setAttribute("href","character-editor.html?" + single.data.id);
+    button1.setAttribute("href","./character-editor.html?id=" + single.data.id +"&name=" + single.data.name + "&shortDescription=" + single.data.shortDescription + "&description=" + single.data.description + "&image=" + single.data.image);
     button2.setAttribute("class","card__button__delete");
   
 

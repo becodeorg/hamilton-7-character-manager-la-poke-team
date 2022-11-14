@@ -16,11 +16,11 @@
         </a>
     </nav>
 
-    <main>
+    <main class="main">
         
         <div id="formcharacter" class="font-sans">
             <h2>Create a new character</h2>
-            <form method="post" action="post">
+            <form method="post" action="post" id="form">
                 <div class="form-example">
                     <label for="name">Name of the character</label>
                     <input type="text" name="name" id="name" placeholder="Enter the pokéname">
@@ -33,7 +33,7 @@
     
                 <div class="form-example">
                     <label for="description">Description</label>
-                    <textarea id="story" name="story" placeholder="Enter a pokédescription"></textarea>
+                    <textarea id="description" name="description" placeholder="Enter a pokédescription"></textarea>
                 </div>
         
                 <div class="form-example">
@@ -42,8 +42,11 @@
                 </div>
         
                 <div class="form-button">
-                    <button class="form-button__add">Add</button>
+
+                    <button type="submit" class="form-button__add">Add</button>
                     <button class="form-button__delete">Delete</button>
+                </div>
+                <div id="dummy">
                 </div>
             </form>
         </div>

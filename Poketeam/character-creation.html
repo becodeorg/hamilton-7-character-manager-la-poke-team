@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="./style.css">
     <title>Ajouter</title>
 </head>
-
+<!-- 
 <body>
     <form action="index.html" id="form" method="post">
         <div class="form-example">
@@ -41,35 +41,53 @@
         </div>
     </form>
 
-    
-        <!-- <form method="post" action="index.html">
-            <div class="form-example">
-                <label for="name">Enter the name of the character </label>
-                <input type="text" name="name" id="name" >
-              </div>
-
-              <div class="form-example">
-                <label for="littledesc">Enter a little description </label>
-                <input type="textarea" name="littledesc" id="littledesc" >
-              </div>
-
-              <div class="form-example">
-                <label for="description">Enter a  description </label>
-                <input type="textarea" name="description" id="description" >
-              </div>
-    
-              <div class="form-example">
-                <label for="file">Enter an Image</label>
-                <input type="file" id="myFile" name="filename">
-                </div>
-    
-              <div class="form-example">
-                <input type="submit" value="Ajouter" id="send">
-              </div>
-        </form> -->
-    
-   
 
     <script type="module" src="/add.js"></script>
+</body> -->
+<body>
+    
+  <nav>
+      <h1 class="text-5xl font-bold text-center mt-10 mb-10">Poke Manager</h1>
+      <a href="./index.html">
+          <img src="./ressources/images/CD57DD73.png" class="logo text-center">
+      </a>
+  </nav>
+
+  <main>
+      
+      <div id="formcharacter" class="font-sans">
+          <h2>Create a new character</h2>
+          <form action="index.html" id="form" method="post">
+              <div class="form-example">
+                  <label for="name">Name of the character</label>
+                  <input type="text" name="name" id="name" placeholder="Enter the pokéname">
+              </div>
+  
+              <div class="form-example">
+                  <label for="littledesc">Short description</label>
+                  <input type="textarea" name="littledesc" id="littledesc" placeholder="Enter the short pokédescription">
+              </div>
+  
+              <div class="form-example">
+                  <label for="description">Description</label>
+                  <textarea id="description" name="description" placeholder="Enter a pokédescription"></textarea>
+              </div>
+      
+              <div class="form-example">
+                  <label for="file">Enter an Image</label>
+                  <input type="file" id="myFile" name="filename" class="input_image">
+              </div>
+      
+              <div class="form-button">
+                <button type="submit" name="send" id="send" class="form-button__add">Ajouter</button>
+                
+                  <button class="form-button__delete"  onclick="window.location.href='index.html'">Cancel</button>
+              </div>
+              <div id="dummy">
+              </div>
+          </form>
+      </div>
+  </main>
+  <script type="module" src="./add.js"></script>
 </body>
 </html>
