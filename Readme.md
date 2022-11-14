@@ -29,4 +29,4 @@ It's a Becode Challenge, the goal is training our JS skills.
 
 ### CATCH THEM ALL !!!!! ###
 <!-- ![image](files/Users/Desktop/BECODE_REPOSITORIES/JS/Poketeam/hamilton-7-character-manager-la-poke-team/Poketeam/ressources/images/readme.png); -->
-![image](../Poketeam/ressources/images/readme.png);
+![image](https://user-images.githubusercontent.com/114306212/201695778-90516628-7a1d-4b14-8fa0-0cd149761a12.png);
