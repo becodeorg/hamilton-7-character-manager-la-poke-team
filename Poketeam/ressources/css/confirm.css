@@ -1,0 +1,101 @@
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10;
+    z-index: 3;
+    box-sizing: border-box;
+
+    opacity: 0;
+    animation-name: confirm---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm--close {
+    animation-name: confirm---close;
+}
+
+.confirm__window {
+
+    border-radius: 12px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 500px;
+    background-color: aliceblue;
+    font-size: 14px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirm__window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    border: 1px solid #ABABAB;
+}
+
+.confirm__titlebar,
+.confirm__content,
+.confirm__buttons {
+    padding: 1.25em;
+}
+
+.confirm__titlebar {
+    border-bottom: 1px solid #ABABAB;
+    background: linear-gradient(90deg, #D5D3D5, #CACCCE);
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm__title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.confirm__close {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(#F86261, #F24B48);
+}
+.confirm__close:hover {
+    background: #c12f2c;
+}
+
+.confirm__buttons {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+}
+.confirm__button {
+    padding: 0.4em 0.8em;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+
+@keyframes confirm---open {
+    from {opacity: 0 }
+    to {opacity: 1 }
+}
+@keyframes confirm---close {
+    from {opacity: 1 }
+    to {opacity: 0 }
+}
+@keyframes confirm__window---open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
