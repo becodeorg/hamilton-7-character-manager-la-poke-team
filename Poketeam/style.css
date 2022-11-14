@@ -531,3 +531,15 @@ h1 {
 		margin-left: 50px;
 	}
 }
+@media (max-width: 550px) {
+	nav{
+		justify-content: center;
+	}
+	.logo{
+		margin-left: 0px;
+	}
+	#search{
+		display: none;
+	}
+	
+}
