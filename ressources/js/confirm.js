@@ -23,14 +23,12 @@ const html = `
 document.addEventListener("click", (e) => {
     const target = e.target;
     console.log(target);
-
     if (target.tagName != "BUTTON") return false;
     if (target.classList.contains("card__button__delete")) {
         body.insertAdjacentHTML("afterbegin", html);
         
     }
     if (target.classList.contains("confirm__button--cancel") || target.classList.contains("confirm__close")){
-        
         document.querySelector(".confirm").remove();
     }
 }, false);

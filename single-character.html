@@ -5,9 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./ressources/css/confirm.css">
     <title>Poke Manager</title>
 </head>
 <body class="font-sans">
+
+    <!-- <div class="confirm">
+        <div class="confirm__window">
+            <div class="confirm__titlebar">
+                <span class="confirm__title">Are you sure ?</span>
+                <button class="confirm__close"></button>
+            </div>
+            <div class="confirm__content">
+                If you confirm, you will lose your character forever.
+            </div>
+            <div class="confirm__buttons">
+                <button class="confirm__button confirm__button--ok confirm__button--fill">OK</button>
+                <button class="confirm__button confirm__button--cancel">Cancel</button>
+            </div>
+        </div>
+    </div> -->
 
     <nav>
         <h1 class="text-5xl font-bold text-center mt-10 mb-10">Poke Manager</h1>
@@ -41,5 +58,16 @@
     </main>
 
     <!-- <script src="./ressources/js/tilt-effect.js"></script> -->
+    <script src="./ressources/js/confirm.js"></script>
+    <script>
+        Confirm.open({
+            title: "Are you sure ?",
+            message: " If you confirm, you will lose your character forever.",
+            okText: "OK",
+            cancelText: "Cancel",
+            onok: () => console.log("You pressed OK!"),
+            oncancel: () => console.log("You cancelled!")
+        });
+    </script>
 </body>
 </html>
