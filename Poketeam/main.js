@@ -36,7 +36,8 @@ import './style.css'
 
 
 
-import axios from 'axios';
+// import axios from 'axios';
+const axios = require('axios');
 
 axios.get('https://character-database.becode.xyz/characters/')
   .then(function (json) {

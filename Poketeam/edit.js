@@ -20,7 +20,8 @@ console.log(id)
 
 }
 
-import axios from 'axios';
+// import axios from 'axios';
+const axios = require('axios');
 
 
 await axios.get('https://character-database.becode.xyz/characters/' +id)
