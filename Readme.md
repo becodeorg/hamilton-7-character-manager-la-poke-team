@@ -3,7 +3,7 @@
  ## Pokemon Manager ##
  
 ## Link to the project ##
-[Pokemon manager](https://dapper-puppy-7cc920.netlify.app/)
+[Pokemon manager](https://golden-medovik-e2a130.netlify.app/)
 
 ## **Who did this project ?**
 
