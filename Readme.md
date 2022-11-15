@@ -1,4 +1,4 @@
-#Character Manager
+# Character Manager
 
  ## Pokemon Manager ##
  
