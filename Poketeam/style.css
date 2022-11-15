@@ -61,7 +61,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	/* background: linear-gradient(45deg, #000, #434343); */
-	background-image: url(../PokeTeam/ressources/images/background.svg);
+	background-image: url(./ressources/images/background.svg);
 	/* background-color: #ddd; */
 	/* background-image: url(../PokeTeam/ressources/images/pokeball_icon.svg); */
 	background-size: cover;
