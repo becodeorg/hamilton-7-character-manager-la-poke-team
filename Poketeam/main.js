@@ -83,21 +83,46 @@ axios.get('https://character-database.becode.xyz/characters/')
         name.append(json.data[i].name);
         paragraph.append(json.data[i].shortDescription);
 
-           if(json.data[i].shortDescription === "Eau" || json.data[i].shortDescription === "EAU"){
+        if(json.data[i].shortDescription === "Eau" || json.data[i].shortDescription === "EAU"){
           newdiv.style.backgroundColor ="rgb(34,211,238,0.8 )";
-            }
-          else if(json.data[i].shortDescription === "plante" || json.data[i].shortDescription === "PLANTE"){
-            newdiv.style.backgroundColor ="rgb(132,204,22,0.8 )";
-            }
-          else if(json.data[i].shortDescription === "feu" || json.data[i].shortDescription === "FEU"){
+          name.style.color="rgb(30 41 59)"
+          paragraph.style.color ="white";
+          paragraph.style.backgroundColor ="rgb(34,211,238,0.8 )";
+          paragraph.style.fontFamily ="RetroG"
+          paragraph.style.padding = "10px";
+          paragraph.style.borderRadius ="5px"
+          }
+        else if(json.data[i].shortDescription === "plante" || json.data[i].shortDescription === "PLANTE"){
+          newdiv.style.backgroundColor ="rgb(132,204,22,0.8 )";
+          name.style.color="rgb(30 41 59)"
+          paragraph.style.color ="white";
+          paragraph.style.backgroundColor ="rgb(132,204,22,0.8 )";
+          paragraph.style.fontFamily ="RetroG"
+          paragraph.style.padding = "10px";
+          paragraph.style.borderRadius ="5px"
+          }
+        else if(json.data[i].shortDescription === "feu" || json.data[i].shortDescription === "FEU"){
           newdiv.style.backgroundColor = "rgb(249,115,22,0.8 )";
-            }
-            else if(json.data[i].shortDescription === "electrique" || json.data[i].shortDescription === "ELECTRIQUE" || json.data[i].shortDescription === "éléctrik"){
-              newdiv.style.backgroundColor = "rgb(253,230,138,0.8 )";
-                }
-          else{
-            newdiv.style.backgroundColor = "rgb(148,163,184,0.7 )";         
-            }
+          name.style.color="rgb(30 41 59)"
+          paragraph.style.color ="white";
+          paragraph.style.backgroundColor ="rgb(249,115,22,0.8 )";
+          paragraph.style.fontFamily ="RetroG"
+          paragraph.style.padding = "10px";
+          paragraph.style.borderRadius ="5px"
+          }
+          else if(json.data[i].shortDescription === "electrique" || json.data[i].shortDescription === "ELECTRIQUE" || json.data[i].shortDescription === "éléctrik"){
+          newdiv.style.backgroundColor = "rgb(253,230,138,0.8 )";
+          name.style.color="rgb(30 41 59)"
+          paragraph.style.color ="white";
+          paragraph.style.backgroundColor ="rgb(253,230,138,0.8 )";
+          paragraph.style.fontFamily ="RetroG"
+          paragraph.style.padding = "10px";
+          paragraph.style.borderRadius ="5px"
+              }
+        else{
+          newdiv.style.backgroundColor = "rgb(148,163,184,0.7 )";  
+          name.style.color="rgb(30 41 59)"       
+          }
 
      
 

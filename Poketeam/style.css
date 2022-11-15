@@ -10,6 +10,10 @@
 	src: url(./ressources/font/pokemon-solid.ttf);
 	font-style: light;
 }
+@font-face {
+    font-family: 'retroG';
+    src: url(./ressources/font/Retro/Retro_Gaming.ttf);
+ }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -88,30 +92,35 @@ nav {
 	justify-content: center;
 	
 }
+
 input#search{
-	position: absolute;
+    position: absolute;
     right: 80px;
     top: 20px;
-	height: 50%;
-	border-radius: 10px;
-	border: 1px solid rgb(148,163,184);
-	background:none;
-	padding-left: 25px;
+    height: 50%;
+    border-radius: 10px;
+    border: 1px solid rgb(148,163,184);
+    background:none;
+    padding-left: 25px;
 }
 input#search:hover{
 
-	border-radius: 10px;
-	border: none;
-	background:white;
-	padding-left: 25px;
+    border-radius: 10px;
+    border: none;
+    background:white;
+    padding-left: 25px;
 }
 input#search:focus{
 
-	border-radius: 10px;
-	border: none;
-	background:white;
-	padding-left: 25px;
+    border-radius: 10px;
+    border: none;
+    background:white;
+    padding-left: 25px;
 }
+input#search::placeholder{
+	font-family: retroG;
+}
+
 h1 {
 	display: none;
 }
@@ -521,4 +530,17 @@ h1 {
 	.logo{
 		margin-left: 50px;
 	}
+}
+
+@media (max-width: 550px) {
+    nav{
+        justify-content: center;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    #search{
+        display: none;
+    }
+    
 }

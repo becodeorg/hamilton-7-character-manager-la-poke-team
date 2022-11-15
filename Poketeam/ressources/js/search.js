@@ -19,12 +19,13 @@ search.addEventListener("keyup", async(e)=>{
     let input = document.getElementById('search').value
     input=input.toLowerCase();
     const x = document.querySelectorAll(".card")
+    const y = document.querySelectorAll(".card__title")
 
 
       
     for (let i = 0; i < x.length; i++) { 
         // console.log(x[i].innerHTML);
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+        if (!y[i].innerHTML.toLowerCase().includes(input)) {
             x[i].style.display="none";
         }
         else {
